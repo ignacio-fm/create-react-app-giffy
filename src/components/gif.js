@@ -1,12 +1,13 @@
 import React from "react";
 
-function Gif({ id, title, url }) {
+import "./Gif.css";
+
+function Gif({ id, title, url, username }) {
     return (
-        <div className="App-gif-item">
+        <a href={`#${id}`} className="App-gif-item">
             <h2>{title}</h2>
             <img alt={title} src={url} />
-            <small>Gif ID: {id}</small>
-        </div>
+        </a>
     )
 }
 

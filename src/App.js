@@ -1,23 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
+import ListOfGifs from './components/ListOfGifs';
 import './App.css';
-import ListOfGifs from './components/listOfGifs';
+
+import { Link, Route } from "wouter"
 
 function App() {
-  const [keyword, setKeyword] = useState('Pandas')
 
   return (
     <div className="App">
       <section className="App-content">
         <h1>¡Hola Gifs! 👋</h1>
-        <p>10 Gif fantásticos de {keyword} ✨</p>
-        <small>Cambiar de animal:</small>
+        <p>10 Gif fantásticos de animales ✨</p>
+        <small>¡Elige un animal!</small>
         <div className='App-nav'>
-          <button onClick={() => setKeyword('Monos')}><span>🐵</span></button>
-          <button onClick={() => setKeyword('Pandas')}><span>🐼</span></button>
-          <button onClick={() => setKeyword('Perros')}><span>🐶</span></button>
-          <button onClick={() => setKeyword('Gatos')}><span>🐱</span></button>
+          <Link href="/gif/panda"><button><span>🐼</span></button></Link>
+          <Link href="/gif/dog"><button><span>🐶</span></button></Link>
+          <Link href="/gif/gato"><button><span>🐱</span></button></Link>
+          <Link href="/gif/mono"><button><span>🐵</span></button></Link>
         </div>
-        <ListOfGifs keyword={keyword} />
+        <Route path="/gif/:keyword" component={ListOfGifs} />
       </section>
     </div>
   )

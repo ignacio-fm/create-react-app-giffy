@@ -38,44 +38,11 @@
   transform: translateY(-6px);
 }
 
+.App-nav button span a {
+  text-decoration: none;
+  color: #282c34;
+}
+
 .App-nav button:active span {
   transform: translateY(-2px);
-}
-
-.App-gif-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 500px;
-  margin: 1rem 0 .5rem 0;
-  padding: .5rem;
-  background-color: #16181d;
-  border: 0 none;
-  border-radius: .8rem;
-}
-
-.App-gif-item h2 {
-  margin: 0 0 .5rem 0;
-  padding: .5rem 1rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  background-color: #282c34;
-  border: 0 none;
-  border-radius: .5rem;
-}
-
-.App-gif-item img {
-  width: 100%;
-  border-radius: .5rem;
-}
-
-.App-gif-item small {
-  margin-top: .5rem;
-  padding: .4rem .75rem;
-  font-size: .85rem;
-  font-weight: 400;
-  background-color: #282c34;
-  border: 0 none;
-  border-radius: .5rem;
 }
